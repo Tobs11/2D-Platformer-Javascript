@@ -1,0 +1,10 @@
+    {
+      "manifest_version": 3,
+      "name": "2D platformer",
+      "version": "1.0",
+      "description": "A 2D RPG Platformer game, made by WeDonHaveAName Studios",
+      "permissions": ["activeTab"],
+      "action": {
+        "default_popup": "index.html"
+      }
+    }

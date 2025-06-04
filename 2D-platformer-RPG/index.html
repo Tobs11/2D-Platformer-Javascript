@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2D RPG Platformer</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas" width="800" height="450"></canvas>
+
+    <div class="ui-container">
+      <div>
+        <div class="health-bar">
+          <div class="health-fill" id="health-fill"></div>
+        </div>
+        <div class="xp-bar">
+          <div class="xp-fill" id="xp-fill"></div>
+        </div>
+      </div>
+      <div class="stats">
+        Level: <span id="player-level">1</span><br>
+        Attack: <span id="player-attack">5</span><br>
+        Defense: <span id="player-defense">2</span><br>
+        Lives: <span id="player-lives">3</span>
+      </div>
+    </div>
+
+    <div class="inventory">
+      <div class="inventory-item">🗡️</div>
+      <div class="inventory-item">🛡️</div>
+      <div class="inventory-item">🧪</div>
+    </div>
+
+    <div class="level-indicator">
+      Level: <span id="current-level">1</span>
+    </div>
+
+    <div class="dialog-box" id="dialog-box">
+      <div class="dialog-name" id="dialog-name">NPC Name</div>
+      <div class="dialog-text" id="dialog-text">Dialog text goes here...</div>
+      <div class="dialog-continue">Press E to continue</div>
+    </div>
+
+    <div class="controls-info">
+      <p>WASD or Arrow Keys: Move</p>
+      <p>Space: Jump</p>
+      <p>J or Click: Attack</p>
+      <p>E: Interact</p>
+      <p>K/Right-Click: Bow</p>
+      <div class="attack-config">
+        <label for="attack-range">Attack Range:</label>
+        <input type="range" id="attack-range" min="30" max="100" value="60" step="5">
+        <span id="attack-range-value">60</span>
+      </div>
+    </div></p>
+    </div>
+
+    <div class="start-screen" id="start-screen">
+      <h1 class="title">ADVENTURE QUEST</h1>
+      <h2 class="subtitle">A 2D RPG Platformer</h2>
+      <button class="btn" id="start-button">START GAME</button>
+    </div>
+
+    <div class="level-complete" id="level-complete">
+      <h1 class="title">LEVEL COMPLETE!</h1>
+      <h2 class="subtitle">XP Gained: <span id="xp-gained">100</span></h2>
+      <button class="btn" id="next-level-button">NEXT LEVEL</button>
+    </div>
+
+    <div class="game-over" id="game-over">
+      <h1 class="title">GAME OVER</h1>
+      <h2 class="subtitle">Better luck next time!</h2>
+      <button class="btn" id="restart-button">TRY AGAIN</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'94a3945ac2aa6e8b',t:'MTc0ODk5OTczMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
